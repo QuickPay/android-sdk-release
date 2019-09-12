@@ -5,7 +5,7 @@ The QuickPay SDK wraps the [QuickPay API](https://learn.quickpay.net/tech-talk/a
 
 ## Installation
 
-You can install the QuickPay SDK either by downloading it directly from our GitHub repo or by using a package manager
+You can find the newest version of the QuickPay SDK on the GitHub repo. We are working on releasing it through a package manager in the future.
 
 
 ### AndroidManifest
