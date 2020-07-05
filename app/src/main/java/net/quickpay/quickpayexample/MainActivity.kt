@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import dk.codebase.androidutils.MyUtilClass
 import net.quickpay.quickpaysdk.PaymentMethod
 import net.quickpay.quickpaysdk.ui.PaymentMethodsFragment
 import net.quickpay.quickpaysdk.QuickPay
@@ -41,9 +40,6 @@ class MainActivity : AppCompatActivity(), PaymentMethodsFragment.OnPaymentMethod
     // Lifecycle
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        MyUtilClass.MyTest()
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
