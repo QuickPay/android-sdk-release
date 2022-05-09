@@ -2,6 +2,7 @@ package net.quickpay.quickpaysdk.networking.quickpayapi
 
 import com.android.volley.Response
 import com.google.gson.Gson
+import net.quickpay.quickpaysdk.QuickPay
 import net.quickpay.quickpaysdk.networking.NetworkUtility
 import net.quickpay.quickpaysdk.networking.ObjectRequest
 import org.json.JSONObject
@@ -16,7 +17,7 @@ open class QPrequest<T>(private val method: Int, private val path: String, prote
     // Static
 
     companion object {
-        protected const val quickPayApiBaseUrl = "https://api.staging.quickpay.net"
+        protected val quickPayApiBaseUrl = if (QuickPay.isInTestMode) "https://api.staging.quickpay.net" else "https://api.quickpay.net"
     }
 
 
