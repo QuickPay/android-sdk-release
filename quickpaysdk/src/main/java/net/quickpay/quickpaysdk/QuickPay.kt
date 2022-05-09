@@ -26,9 +26,9 @@ public class QuickPay(internal var apiKey: String) {
 
         // Static Init
         fun init(apiKey: String, context: Context, isInTestMode: Boolean = false) {
+            this.isInTestMode = isInTestMode
             NetworkUtility.init(context)
             instance = QuickPay(apiKey)
-
         }
 
         fun log(msg: String) {
