@@ -16,7 +16,7 @@ open class QPrequest<T>(private val method: Int, private val path: String, prote
     // Static
 
     companion object {
-        protected const val quickPayApiBaseUrl = "https://api.quickpay.net"
+        protected const val quickPayApiBaseUrl = "https://api.staging.quickpay.net"
     }
 
 
