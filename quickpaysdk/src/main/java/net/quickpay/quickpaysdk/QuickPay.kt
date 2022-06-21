@@ -14,6 +14,8 @@ public class QuickPay(internal var apiKey: String) {
         private const val LOGTAG = "QuickpayAct"
 
         private var backingInstance: QuickPay? = null
+        var isInTestMode: Boolean = false
+
         var instance: QuickPay
             get() {
                 return backingInstance ?: throw RuntimeException("The QuickPay SDK needs to be initialized before usage. \nQuickPay.init(\"<API_KEY>\", <CONTEXT>)")
@@ -23,10 +25,10 @@ public class QuickPay(internal var apiKey: String) {
             }
 
         // Static Init
-        fun init(apiKey: String, context: Context) {
+        fun init(apiKey: String, context: Context, isInTestMode: Boolean = false) {
+            this.isInTestMode = isInTestMode
             NetworkUtility.init(context)
             instance = QuickPay(apiKey)
-
         }
 
         fun log(msg: String) {
